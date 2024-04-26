@@ -32,7 +32,7 @@ SPOTIFY_REDIRECT_URI=http://localhost:3000/player
 SPOTIFY_CLIENT_SECRET=xxx
 SPOTIFY_CLIENT_ID=xxx
 SPOTIFY_SCOPES=user-modify-playback-state streaming user-read-email user-read-private
-TUNEQUEST_CREATE_URL=http://localhost:5173
+NEXT_PUBLIC_TUNEQUEST_CREATE_URL=http://localhost:5173
 ```
 
 To run the development server:
