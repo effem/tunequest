@@ -19,6 +19,7 @@ Currently the API Client is in development mode and I have not stress tested the
 If you encounter any issues, please let me know by opening an issue or a pull request.
 
 ## Create your own Cards
+You can create your own cards using the [card creator tool](https://github.com/effem/tunequest-card-creator).
 
 ## Getting Started
 
