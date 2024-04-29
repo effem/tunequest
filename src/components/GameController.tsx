@@ -23,13 +23,13 @@ export default function GameController({token}: Props) {
     const device = usePlayerDevice();
     const [showScanner, setShowScanner] = useState<boolean>(true);
 
+
     useEffect(() => {
-        const noSleep = new NoSleep();
-        noSleep.enable();
-        return () => {
-            noSleep.disable();
+        if(!showScanner){
+            const noSleep = new NoSleep();
+            noSleep.enable();
         }
-    }, []);
+    }, [showScanner]);
     const handleQrResult = (trackId: string) => {
         setShowScanner(false);
         if (device === null) return;
