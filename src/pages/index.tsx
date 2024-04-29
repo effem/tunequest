@@ -13,7 +13,7 @@ export default function Home() {
             <div className="pointer-events-none fixed inset-x-0 bottom-0 sm:px-6 sm:pb-5 lg:px-8">
                 <div
                     className="pointer-events-auto flex items-center justify-between gap-x-6 bg-blue-50 px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">
-                    <p className="text-sm leading-6 text-blue-700 flex space-x-2">
+                    <div className="text-sm leading-6 text-blue-700 flex space-x-2">
                         <div className="text-blue-400">
                             <strong className="font-semibold">Important</strong>
                             <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
@@ -23,7 +23,7 @@ export default function Home() {
                                 Due to constrains in the Spotify API this only works with a Spotify Premium Account.
                             </span>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
 
