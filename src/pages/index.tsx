@@ -20,7 +20,7 @@ export default function Home() {
                                 <circle cx={1} cy={1} r={1}/>
                             </svg>
                             <span>
-                        Due to constrains in the Spotify API this only works with a Spotify Premium Account.
+                                Due to constrains in the Spotify API this only works with a Spotify Premium Account.
                             </span>
                         </div>
                     </p>
