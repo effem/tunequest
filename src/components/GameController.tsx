@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { usePlayerDevice, useSpotifyPlayer } from "react-spotify-web-playback-sdk";
 import QRCodeScanner from "@/components/QRCodeScanner";
 import Link from "next/link";
@@ -6,11 +6,11 @@ import { PlayButton } from "@/components/PlayButton";
 import { ForwardButton } from "@/components/ForwardButton";
 import { RewindButton } from "@/components/RewindButton";
 import ProgressBar from "@/components/ProgressBar";
+import NoSleep from 'nosleep.js';
 
 type Props = {
     token: string;
 };
-
 
 const hitsterMapping = {
     'de': {
@@ -23,6 +23,13 @@ export default function GameController({token}: Props) {
     const device = usePlayerDevice();
     const [showScanner, setShowScanner] = useState<boolean>(true);
 
+    useEffect(() => {
+        const noSleep = new NoSleep();
+        noSleep.enable();
+        return () => {
+            noSleep.disable();
+        }
+    }, []);
     const handleQrResult = (trackId: string) => {
         setShowScanner(false);
         if (device === null) return;
