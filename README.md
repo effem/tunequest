@@ -11,6 +11,8 @@ TuneQuest will push your memory and musical knowledge to the limit as you compet
 ## Important Notes
 
 Due to the Spotify API restrictions, the game can only be played by users with a Spotify Premium account.
+Also due to the nature of web browsers in general, the first scanned song may not play automatically and you may have to click on the play button to start the song.
+This is a feature of the web browsers to prevent autoplaying of media content that is often times unwanted by the user.
 
 ## Hosted Version
 
