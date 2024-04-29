@@ -52,7 +52,7 @@ export default function Home() {
                             >
                                 Play the Game
                             </Link>
-                            <Link href={createUrl} className="text-sm font-semibold leading-6 text-gray-900">
+                            <Link href={createUrl} target="_blank" className="text-sm font-semibold leading-6 text-gray-900">
                                 Create Your Own Game <span aria-hidden="true">→</span>
                             </Link>
                         </div>
