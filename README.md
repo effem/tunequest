@@ -1,3 +1,6 @@
+# IMPORTANT
+Using the Spotify API to creat Games like e.g. [Games or trivia quizzes is against the their terms and conditions}(https://developer.spotify.com/compliance-tips#disallowed-use-cases). Therefor use/host it at your own risk.
+
 # TuneQuest
 
 Welcome to TuneQuest, a music guessing game that will put your music knowledge to the test! 
