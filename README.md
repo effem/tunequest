@@ -17,15 +17,6 @@ Due to the Spotify API restrictions, the game can only be played by users with a
 Also due to the nature of web browsers in general, the first scanned song may not play automatically and you may have to click on the play button to start the song.
 This is a feature of the web browsers to prevent autoplaying of media content that is often times unwanted by the user.
 
-## Hosted Version
-
-You can play the game at [https://tunequest.rofln.de](https://tunequest.rofln.de) or just self-host your own version.
-Currently the API Client is in development mode and I have not stress tested the limitations of the Spotify API in development mode.
-If you encounter any issues, please let me know by opening an issue or a pull request.
-
-## Create your own Cards
-You can create your own cards using the [card creator tool](https://github.com/effem/tunequest-card-creator).
-
 ## Getting Started
 
 If you want to run this project, you need to create a `.env` file in the root of the project with the following content:
