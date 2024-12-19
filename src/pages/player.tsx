@@ -65,6 +65,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({
             return {
                 props: {token: response},
             };
+        } else {
+            console.error('Got non token object as response from spotify', response);
         }
     }
 
