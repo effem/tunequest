@@ -22,6 +22,7 @@ export default function GameController({token}: Props) {
     const player = useSpotifyPlayer();
     const device = usePlayerDevice();
     const [showScanner, setShowScanner] = useState<boolean>(true);
+    const [randomStart, setRandomStart] = useState<boolean>(false);
 
 
     useEffect(() => {
@@ -33,12 +34,14 @@ export default function GameController({token}: Props) {
     const handleQrResult = (trackId: string) => {
         setShowScanner(false);
         if (device === null) return;
+        // set position to random value between 0 and 60 seconds
+        let position = randomStart ? Math.floor(Math.random() * 60000): 0;
 
         fetch(
             `https://api.spotify.com/v1/me/player/play?device_id=${device?.device_id}`,
             {
                 method: "PUT",
-                body: JSON.stringify({uris: [`spotify:track:${trackId}`]}),
+                body: JSON.stringify({uris: [`spotify:track:${trackId}`], 'position_ms': position}),
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,
@@ -82,6 +85,10 @@ export default function GameController({token}: Props) {
                     <h1 className="w-full text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-12">
                         <span className="text-indigo-500">Tune</span>Quest
                     </h1>
+                    <div className="flex items-center mb-4">
+                        <input type="checkbox"  id="randomStart" name="randomStart"  checked={randomStart} onChange={(event) => setRandomStart(event.target.checked)} className="w-4 h-4 rounded" />
+                        <label htmlFor="randomStart" className="ms-2 text-sm font-medium"> Random start between 0 and 60s</label>
+                    </div>
                     <div className="mb-8">
                         <ProgressBar/>
                     </div>
